@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.local
+data/*.sqlite
+data/*.db
+data/*.log
+data/reviews-*.json
+data/reviews-*.csv
+data/reviews-*.md
+data/reviews-*.txt
+!data/*example*.json
+!data/*example*.txt
+.pw-profile/
+out/

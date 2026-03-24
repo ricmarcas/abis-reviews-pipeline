@@ -1,0 +1,21 @@
+{
+  "name": "abis-reviews-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium",
+    "reviews:scrape": "node scripts/abis-reviews-scrape-to-sqlite.mjs ./data/reviews-locations.lines.txt ./data/abis_reviews.sqlite",
+    "reviews:analyze": "node scripts/abis-reviews-analyze.mjs ./data/reviews-locations.example.json ./data/abis_reviews.sqlite ./data/reviews-analysis-report.json",
+    "reviews:code": "node scripts/abis-reviews-code.mjs",
+    "reviews:consolidate-codes": "node scripts/abis-reviews-consolidate-codes.mjs",
+    "reviews:executive": "node scripts/abis-reviews-export-executive.mjs ./data/reviews-analysis-report.json ./data",
+    "reviews:payload": "node scripts/abis-reviews-export-sync-payload.mjs ./data/abis_reviews.sqlite ./data/reviews-sync-payload.json",
+    "reviews:mark-synced": "node scripts/abis-reviews-mark-synced.mjs ./data/abis_reviews.sqlite ./data/reviews-sync-payload.json",
+    "reviews:package-report": "node scripts/abis-reviews-package-report.mjs",
+    "reviews:run": "npm run reviews:scrape && npm run reviews:analyze && npm run reviews:code && npm run reviews:executive && npm run reviews:payload && npm run reviews:package-report"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

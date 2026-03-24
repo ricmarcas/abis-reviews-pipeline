@@ -1,0 +1,27 @@
+{
+  "client": "Cliente Demo",
+  "analysis": {
+    "max_comment_age_days": 90,
+    "fallback_limit": 30,
+    "scroll_cycles": 14,
+    "age_buckets_days": [7, 30, 90, 180]
+  },
+  "locations": [
+    {
+      "group": "client",
+      "name": "La Europea Interlomas",
+      "location_url": "https://www.google.com/maps/place/La+Europea+Interlomas/@19.4023394,-99.2943876,15z/data=!3m1!5s0x85d2013585d57647:0x1e82ca140590bf07!4m10!1m2!2m1!1sLa+Europea!3m6!1s0x85d206d30edb4369:0x4a9ee33aefc3a668!8m2!3d19.4023394!4d-99.2753332!15sCgpMYSBFdXJvcGVhIgOIAQFaDCIKbGEgZXVyb3BlYZIBDGxpcXVvcl9zdG9yZeABAA!16s%2Fg%2F1tywy90k?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "group": "competitor_1",
+      "name": "Competidor 1 - Punto de venta",
+      "location_url": "https://www.google.com/maps/place/...",
+      "max_comment_age_days": 60
+    },
+    {
+      "group": "competitor_2",
+      "name": "Competidor 2 - Punto de venta",
+      "location_url": "https://www.google.com/maps/place/..."
+    }
+  ]
+}
