@@ -59,6 +59,18 @@ npm run reviews:executive
 npm run reviews:payload
 ```
 
+Modo scraping recomendado (abre navegador y hace scroll visible):
+
+```bash
+npm run reviews:scrape:visual
+```
+
+Modo headless (más rápido, menor estabilidad en algunos layouts de Maps):
+
+```bash
+npm run reviews:scrape:headless
+```
+
 ## Salidas principales
 
 - `data/abis_reviews.sqlite`

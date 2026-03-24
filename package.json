@@ -6,6 +6,8 @@
   "scripts": {
     "postinstall": "PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium",
     "reviews:scrape": "node scripts/abis-reviews-scrape-to-sqlite.mjs ./data/reviews-locations.lines.txt ./data/abis_reviews.sqlite",
+    "reviews:scrape:visual": "MAPS_HEADLESS=false MAPS_USE_PERSISTENT_CONTEXT=true node scripts/abis-reviews-scrape-to-sqlite.mjs ./data/reviews-locations.lines.txt ./data/abis_reviews.sqlite",
+    "reviews:scrape:headless": "MAPS_HEADLESS=true MAPS_USE_PERSISTENT_CONTEXT=false node scripts/abis-reviews-scrape-to-sqlite.mjs ./data/reviews-locations.lines.txt ./data/abis_reviews.sqlite",
     "reviews:analyze": "node scripts/abis-reviews-analyze.mjs ./data/reviews-locations.example.json ./data/abis_reviews.sqlite ./data/reviews-analysis-report.json",
     "reviews:code": "node scripts/abis-reviews-code.mjs",
     "reviews:consolidate-codes": "node scripts/abis-reviews-consolidate-codes.mjs",
